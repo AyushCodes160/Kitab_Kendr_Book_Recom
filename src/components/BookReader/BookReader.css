@@ -1,0 +1,128 @@
+.book-reader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-neutral-50);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.reader-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  background-color: white;
+  box-shadow: var(--shadow);
+  z-index: 10;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-700);
+  font-size: 1.25rem;
+}
+
+.reader-title {
+  font-weight: 500;
+  flex-grow: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 var(--space-4);
+}
+
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-700);
+  font-size: 1.25rem;
+}
+
+.favorite-button.is-favorite {
+  color: var(--color-accent-500);
+}
+
+.reader-content {
+  flex: 1;
+  padding: var(--space-8);
+  line-height: 1.6;
+  overflow-y: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  color: var(--color-neutral-900);
+}
+
+.reader-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-4);
+  background-color: white;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--space-2);
+}
+
+.page-button {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary-600);
+  color: white;
+  font-weight: 500;
+}
+
+.page-button:disabled {
+  background-color: var(--color-neutral-300);
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+}
+
+.font-controls {
+  display: flex;
+  align-items: center;
+}
+
+.font-button {
+  padding: var(--space-1) var(--space-2);
+  margin: 0 var(--space-1);
+  border-radius: var(--border-radius);
+  background-color: var(--color-neutral-200);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .reader-content {
+    padding: var(--space-10) var(--space-16);
+  }
+  
+  .reader-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .page-navigation {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
